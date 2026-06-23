@@ -47,12 +47,14 @@ agent("서울 날씨 알려줘")  # Agent가 알아서 get_weather 호출
 
 1. AWS 콘솔 → **Amazon Bedrock** 클릭
 2. 왼쪽 메뉴 → **Model catalog** 클릭
-3. 검색창에 모델명 입력 → 상세 페이지에서 접근 상태 확인:
+3. 화면 상단에 **Serverless** / **Bedrock Marketplace** 탭이 표시됨 → **Serverless** 선택
+4. 아래쪽 **Model filter** 입력창에 모델명 입력하여 검색
+5. 검색 결과에서 모델 클릭 → 상세 페이지에서 접근 상태 확인
 
-| 모델 | 용도 | 모델 ID |
-|------|------|---------|
-| **Claude Sonnet 4.6** | Strands 기본 모델 | `global.anthropic.claude-sonnet-4-6` |
-| **Claude Haiku 4.5** | 빠른 응답 / P7_02 | `us.anthropic.claude-haiku-4-5-20251001` |
+| 모델 | Model filter 입력값 | 용도 |
+|------|-------------------|------|
+| **Claude Sonnet 4.6** | `Claude Sonnet 4` | Strands 기본 모델 |
+| **Claude Haiku 4.5** | `Claude Haiku 4` | 빠른 응답 / P7_02 |
 
 > 접근 권한이 없으면 상세 페이지에서 **Request access** 버튼 클릭 → 즉시 승인됩니다.
 
