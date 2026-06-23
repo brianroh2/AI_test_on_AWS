@@ -1,0 +1,76 @@
+# ============================================================
+# Streamlit 서버 설정 파일
+# 위치: {프로젝트}/.streamlit/config.toml
+#
+# 주요 설정 항목 설명:
+#   [server]   : 서버 포트, 외부 접속 허용 여부
+#   [browser]  : 브라우저 자동 실행 여부
+#   [theme]    : UI 테마 (light/dark/커스텀)
+#   [logger]   : 로그 레벨
+# ============================================================
+
+[server]
+# 서버 포트 (기본값: 8501)
+port = 8501
+
+# 외부 IP에서 접속 허용 (SageMaker/EC2 배포 시 필수)
+# headlessMode가 true이면 자동으로 0.0.0.0 바인딩
+address = "0.0.0.0"
+
+# headless 모드: True이면 브라우저 자동 실행 안 함
+# SageMaker / EC2 / Docker 환경에서는 반드시 true
+headless = true
+
+# 파일 변경 시 자동 새로고침 (개발 중에는 true 권장)
+runOnSave = true
+
+# 최대 업로드 파일 크기 (MB)
+maxUploadSize = 200
+
+# CORS 허용 (외부 도메인에서 접속 시)
+enableCORS = false
+
+# XSRF 보호 비활성화 (프록시 환경에서 필요할 수 있음)
+enableXsrfProtection = false
+
+
+[browser]
+# 서버 시작 시 브라우저 자동 열기 여부
+# SageMaker 환경에서는 false 권장
+gatherUsageStats = false
+serverAddress = "localhost"
+serverPort = 8501
+
+# ── SageMaker 환경별 접속 URL 참고 ──────────────────────────
+# Code Editor Space (현재 환경):
+#   https://{domain-id}.studio.{region}.sagemaker.aws/codeeditor/default/proxy/8501/
+#
+# JupyterLab Space:
+#   https://{domain-id}.studio.{region}.sagemaker.aws/jupyter/default/proxy/8501/
+
+
+[theme]
+# 기본 테마: "light" 또는 "dark"
+base = "light"
+
+# 주요 색상 (AWS 스타일)
+primaryColor = "#FF9900"        # 버튼·강조색 (AWS 오렌지)
+backgroundColor = "#FFFFFF"     # 메인 배경
+secondaryBackgroundColor = "#F0F2F6"  # 사이드바 배경
+textColor = "#262730"           # 기본 텍스트
+
+# 폰트: "sans serif", "serif", "monospace"
+font = "sans serif"
+
+
+[logger]
+# 로그 레벨: "error", "warning", "info", "debug"
+level = "info"
+
+
+[client]
+# 툴바 표시 여부 (우상단 메뉴)
+toolbarMode = "minimal"
+
+# 에러 세부 정보 표시
+showErrorDetails = true

@@ -1,0 +1,4 @@
+{
+    "python.defaultInterpreterPath": "/opt/conda/bin/python3.12",
+    "python.terminal.activateEnvironment": false
+}

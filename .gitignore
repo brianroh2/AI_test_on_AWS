@@ -1,0 +1,29 @@
+# AWS 리소스 ID (민감정보)
+guardrail_config.json
+rag_config.json
+
+# 저작권 교재
+Agent_AI_개발실습.pdf
+
+# Python 캐시
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 세션/임시 데이터
+sessions/
+backup/
+tmp_memo.txt
+advpo_input.jsonl
+
+# Claude Code 내부 데이터
+.claude/
+
+# 환경변수
+.env
+*.env
+
+# OS
+.DS_Store
+Thumbs.db
