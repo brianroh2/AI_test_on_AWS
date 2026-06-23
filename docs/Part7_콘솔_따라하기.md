@@ -347,7 +347,7 @@ streamlit run P7_04_jarvis_advanced_streamlit.py \
 □ Amazon Transcribe — 지원 언어 목록 확인
 □ IAM — SageMaker 실행 역할에 Polly/Transcribe 권한 추가 완료
 □ S3 — jarvis-stt-tts-{계정ID} 버킷 존재 여부 확인
-□ Bedrock Model access — Claude Sonnet/Haiku Access granted 확인
+□ Bedrock Model catalog — Claude Sonnet/Haiku 접근 권한 확인 (Model access → Model catalog 으로 변경됨)
 □ Nova Sonic — LEGACY 상태 확인 (실행 불가)
 □ P7_01 실행 → TTS/STT 왕복 검증 성공
 □ P7_02 실행 → 텍스트+음성 챗봇 동작 확인

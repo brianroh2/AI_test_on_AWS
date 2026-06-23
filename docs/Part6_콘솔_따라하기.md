@@ -42,17 +42,19 @@ agent("서울 날씨 알려줘")  # Agent가 알아서 get_weather 호출
 
 ### 1-1. 모델 접근 확인
 
+> **⚠️ UI 변경 안내 (2025년 이후)**  
+> 기존 **Model access** 메뉴는 **Model catalog** 으로 통합되었습니다.
+
 1. AWS 콘솔 → **Amazon Bedrock** 클릭
-2. 왼쪽 메뉴 → **Model access** 클릭
-3. 아래 모델에 **Access granted** 표시 확인:
+2. 왼쪽 메뉴 → **Model catalog** 클릭
+3. 검색창에 모델명 입력 → 상세 페이지에서 접근 상태 확인:
 
 | 모델 | 용도 | 모델 ID |
 |------|------|---------|
 | **Claude Sonnet 4.6** | Strands 기본 모델 | `global.anthropic.claude-sonnet-4-6` |
 | **Claude Haiku 4.5** | 빠른 응답 / P7_02 | `us.anthropic.claude-haiku-4-5-20251001` |
 
-> **Access granted** 가 아니라 **Available to request** 상태이면  
-> 체크박스 선택 → **Request model access** 클릭 → 즉시 승인됩니다.
+> 접근 권한이 없으면 상세 페이지에서 **Request access** 버튼 클릭 → 즉시 승인됩니다.
 
 ---
 
@@ -72,8 +74,12 @@ Strands Agent의 핵심인 도구 선택과 다단계 추론을 콘솔에서 미
 
 ### 2-1. Chat Playground 접속
 
-1. 왼쪽 메뉴 → **Playgrounds** → **Chat** 클릭
-2. **Select model** → Anthropic → **Claude Sonnet 4** 선택
+> **⚠️ UI 변경 안내 (2025년 이후)**  
+> 메뉴 구조 변경: `Playgrounds → Chat` → `테스트 → Playground`  
+> 진입 후 모델 선택도 별도 화면 없이 채팅 화면 상단 드롭다운으로 즉시 선택합니다.
+
+1. 왼쪽 메뉴 → **테스트** → **Playground** 클릭
+2. 화면 상단 모델 드롭다운 → **Anthropic** → **Claude Sonnet 4.6** 선택
 
 ### 2-2. System Prompt 설정 (Strands 스타일)
 
